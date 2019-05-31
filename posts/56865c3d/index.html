@@ -94,13 +94,20 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Starry starry night">
-<meta property="og:url" content="https://en.corleone.top/index.html">
+  <meta name="description" content="This is a c program on windows showing a example of buffer overflow. Knowledge backgroudWhen a function is called,the parameters of it and a address will be pushed in to the stack.This address(let us">
+<meta name="keywords" content="C,Tech">
+<meta property="og:type" content="article">
+<meta property="og:title" content="An experiment on buffer overflow">
+<meta property="og:url" content="https://en.corleone.top/posts/56865c3d/index.html">
 <meta property="og:site_name" content="Starry starry night">
+<meta property="og:description" content="This is a c program on windows showing a example of buffer overflow. Knowledge backgroudWhen a function is called,the parameters of it and a address will be pushed in to the stack.This address(let us">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://en.corleone.top/posts/56865c3d/windows-result.png">
+<meta property="og:updated_time" content="2016-03-22T14:39:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Starry starry night">
+<meta name="twitter:title" content="An experiment on buffer overflow">
+<meta name="twitter:description" content="This is a c program on windows showing a example of buffer overflow. Knowledge backgroudWhen a function is called,the parameters of it and a address will be pushed in to the stack.This address(let us">
+<meta name="twitter:image" content="https://en.corleone.top/posts/56865c3d/windows-result.png">
 
 
 
@@ -108,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="https://en.corleone.top/">
+  <link rel="canonical" href="https://en.corleone.top/posts/56865c3d/">
 
 
 
@@ -118,7 +125,7 @@
   };
 </script>
 
-  <title>Starry starry night</title>
+  <title>An experiment on buffer overflow | Starry starry night</title>
   
 
 
@@ -166,8 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -205,7 +211,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -293,7 +299,7 @@
 
 <div class="site-nav">
   <ul id="menu" class="menu">
-    <li class="menu-item" style="opacity: 1; transform: translateY(0px);"> <a href="https://cn.corleone.top/" rel="section"><i class="menu-item-icon fa fa-fw fa-globe"></i>简体中文</a> </li>
+    <li class="menu-item" style="opacity: 1; transform: translateY(0px);"> <a href="https://cn.corleone.top/posts/56865c3d/" rel="section"><i class="menu-item-icon fa fa-fw fa-globe"></i>简体中文</a> </li>
   </ul>
 </div>
 
@@ -316,167 +322,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://en.corleone.top/posts/2ee4000f/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Vincent Ge">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Starry starry night">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/2ee4000f/" class="post-title-link" itemprop="url">Some differences between array and pointer in ANSI C</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2016-04-16 15:03:00" itemprop="dateCreated datePublished" datetime="2016-04-16T15:03:00+08:00">2016-04-16</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-            <span id="/posts/2ee4000f/" class="leancloud_visitors" data-flag-title="Some differences between array and pointer in ANSI C">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Views: </span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Let’s begin with a snippet at page 104 of <em>The C Programming Language(Second Edition)</em>:</p>
-<img src="/posts/2ee4000f/book-snippet.png" title="A snippet from The C Programming Language(Second Edition)">
-<p>From this snippet we can see,it is illegal to evaluate c expressions like:</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/posts/2ee4000f/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -508,10 +356,8 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/56865c3d/" class="post-title-link" itemprop="url">An experiment on buffer overflow</a>
+          <h2 class="post-title" itemprop="name headline">An experiment on buffer overflow
+
               
             
           </h2>
@@ -582,20 +428,16 @@
       
 
       
-        
-          <p>This is a c program on windows showing a example of buffer overflow.</p>
+        <p>This is a c program on windows showing a example of buffer overflow.</p>
 <h1 id="Knowledge-backgroud"><a href="#Knowledge-backgroud" class="headerlink" title="Knowledge backgroud"></a>Knowledge backgroud</h1><p>When a function is called,the parameters of it and a address will be pushed in to the stack.This address(let us call it RET)  points to a instruction which will be executed next after the function call.Then internal variables of the called function will be pushed into the stack.</p>
 <p>The later some data is pushed to the stack,the lower the logic address of the data in the memory will be.So the internal variable has lower address than RET.If we set the the value of the internal variable intentionally to make the size of the internal variable longer that it should be,we can override the value of the RET.Then the program will execute the instruction pointed by the RET,which is modified by us.</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/posts/56865c3d/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
+<a id="more"></a>
+<h1 id="Explanations-on-this-c-program"><a href="#Explanations-on-this-c-program" class="headerlink" title="Explanations on this c program"></a>Explanations on this c program</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">overflow</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* input)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> buf[<span class="number">8</span>];</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Virtual address of 'buf' = Ox%p\n"</span>, buf);</span><br><span class="line">    <span class="built_in">strcpy</span>(buf,input);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Function 'fun' has been called without an explicitly invocation.\n"</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Buffer Overflow attack succeeded!\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>* argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Virtual address of 'overflow' = Ox%p\n"</span>,overflow);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Virtual address of 'fun' = Ox%p\n"</span>,fun);</span><br><span class="line">    <span class="keyword">char</span> input[<span class="number">30</span>]=<span class="string">"01234567890123456789"</span>;</span><br><span class="line">    <span class="keyword">char</span> add[<span class="number">5</span>];</span><br><span class="line">    *((<span class="keyword">int</span>*)add) = fun;</span><br><span class="line">    add[<span class="number">4</span>] = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">strcat</span>(input, add);</span><br><span class="line">    overflow(input);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The function main() will call the function overflow(),then return to main().In normal circumstances,the function fun() will not be executed.But using the knowledge above we can let the function fun() be executed.</p>
+<img src="/posts/56865c3d/windows-result.png" title="This is the result of this experiment on Windows OS">
+<p>function fun() is executed!</p>
+<h1 id="How-to-run-this-c-program"><a href="#How-to-run-this-c-program" class="headerlink" title="How to run this c program"></a>How to run this c program</h1><p>On windows OS,you’d better use mingw to compile it(the c compiler of visual studio may not allow buffer-overflow to happen).Click <a href="https://raw.githubusercontent.com/VincentSeven/buffer_overflow/master/mingw-get-inst-20120426.exe" target="_blank" rel="noopener">here</a> to download a setup program of mingw.</p>
+
       
     </div>
 
@@ -616,170 +458,42 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://en.corleone.top/posts/b1d4025b/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Vincent Ge">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Starry starry night">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/posts/b1d4025b/" class="post-title-link" itemprop="url">Hello World</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2016-03-22 21:39:00" itemprop="dateCreated datePublished" datetime="2016-03-22T21:39:00+08:00">2016-03-22</time>
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/C/" rel="tag"># C</a>
           
-            
-            
+            <a href="/tags/Tech/" rel="tag"># Tech</a>
           
-
-          
-          
-            <span id="/posts/b1d4025b/" class="leancloud_visitors" data-flag-title="Hello World">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Views: </span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/posts/b1d4025b/#more" rel="contents">
-                Read more &raquo;
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/b1d4025b/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
+            
+          </div>
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/2ee4000f/" rel="prev" title="Some differences between array and pointer in ANSI C">
+                Some differences between array and pointer in ANSI C <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -789,14 +503,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -816,8 +531,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -923,6 +647,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Knowledge-backgroud"><span class="nav-number">1.</span> <span class="nav-text">Knowledge backgroud</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Explanations-on-this-c-program"><span class="nav-number">2.</span> <span class="nav-text">Explanations on this c program</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#How-to-run-this-c-program"><span class="nav-number">3.</span> <span class="nav-text">How to run this c program</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1052,6 +793,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
 
   
 
@@ -1068,6 +813,8 @@
   
 
 
+  
+
 
   
 
@@ -1078,38 +825,37 @@
   
   <script>
     
-    function showTime(Counter) {
-      var entries = [];
+    function addCount(Counter) {
       var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
 
-      $visitors.each(function() {
-        entries.push( $(this).attr('id').trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
         .done(function({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for (var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if (countSpan.text() == '') {
-              countSpan.text(0);
-            }
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
           }
         })
         .fail(function ({ responseJSON }) {
@@ -1134,9 +880,7 @@
             });
           };
           
-            if ($('.post-title-link').length >= 1) {
-              showTime(Counter);
-            }
+            addCount(Counter);
           
         });
     });
